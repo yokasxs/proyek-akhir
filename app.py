@@ -60,26 +60,13 @@ def apiDeteksi():
 		hasil_prediksi = model.predict(df_test[0:1])[0]
 		print(hasil_prediksi)
 
-		# # Set Path untuk gambar hasil prediksi
-		# if hasil_prediksi == 'Iris-setosa':
-		# 	gambar_prediksi = '/static/images/iris_setosa.jpg'
-		# elif hasil_prediksi == 'Iris-versicolor':
-		# 	gambar_prediksi = '/static/images/iris_versicolor.jpg'
-		# else:
-		# 	gambar_prediksi = '/static/images/iris_virginica.jpg'
-		
 		# Return hasil prediksi dengan format JSON
 		return jsonify({
 			"prediksi": hasil_prediksi
 			# "gambar_prediksi" : gambar_prediksi
 		})
 		
-		'''
-		return jsonify({
-			"prediksi": "setosa",
-			"gambar_prediksi" : '/static/images/iris_setosa.jpg'
-		})
-		'''
+	
 
 # =[Main]========================================
 
