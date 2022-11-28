@@ -1,7 +1,7 @@
 # Proyek Akhir Orbit Future Academy 
 Proyek ini merupakan tugas akhir dari Program Studi Independen Bersertifikat oleh Orbit Future Academy Angkatan 3
 
-## Our Team Project
+## Team Project
 **Goldfarb 1 (GolfOne)**
 - Riki Indramawan (Institut Teknologi Sepuluh Nopember)
 - Rio Meisya (Universitas Trunojoyo)
@@ -19,11 +19,13 @@ Pengguna diminta untuk memasukkan input berupa 6 nilai pengukuran untuk dapat me
 `input berupa angka| min. 1 = Januari | max. 12 = Desember`
 
 - FFMC (The Fine Fuel Moisture Code)
+
 Parameter yang mewakili kelembaban dari bahan bakar serasah hutan di bawah kanopi hutan
 
 `input dalam FWI System| min=18.7 | max=96.20)`
 
 - DMC (The Duff Moisture Code)
+
 Parameter kelembaban bahan bakar organik yang terurai di bawah serasah
 
 `input dalam FWI System| min=1.1| max=291.3`
@@ -40,6 +42,7 @@ Kelembapan relatif / kelembapan rata-rata
 `input dalam % | min=15| max=100`
 
 - DC
+
 Mewakili kelembaban bahan bakar dari bahan organik yang terurai di bawah serasah
 
 `input dalam FWI System| min=7.9| max=860.6`
