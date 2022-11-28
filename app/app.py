@@ -67,7 +67,6 @@ def apiDeteksi():
 if __name__ == '__main__':
 	
 	# Load model yang telah ditraining
-	# model = load('model_iris_dt.model')
 	command = "fuser -k 4829/tcp"
 	exec(command)
 	# Run Flask di localhost 
