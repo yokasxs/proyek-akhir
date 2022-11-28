@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Judul Halaman -->
+    <title>Wildfires Area Predictor</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Icon -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='/images/icon2.png') }}">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href={{ url_for( 'static', filename='/css/bootstrap.min.css' ) }} type="text/css">
+    <link rel="stylesheet" href={{ url_for( 'static', filename='/css/client_side.css' ) }} type="text/css">
+
+    <!-- JavaScript -->
+    <script src={{ url_for( 'static', filename='/js/jquery_3.6.0.min.js' ) }}></script>
+    <script src={{ url_for( 'static', filename='/js/bootstrap_3.4.1.min.js' ) }}></script>
+</head>
+
+<body id="halamanku" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+
+            <!-- Logo -->
+            <div class="navbar-header">
+                <img src={{ url_for( 'static', filename='/images/icon2.png' ) }} alt="Orbit Logo" width="50" height="50" align="left">
+                <a class="navbar-brand" href="#halamanku">&#160;Wildfires Area Predictor</a>
+            </div>
+
+            <!-- Daftar Halaman -->
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#informasi">TENTANG</a></li>
+                    <li><a href="#aplikasi">APLIKASI</a></li>
+                    <li><a href="#anggotaKelompok">OUR TEAM</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Bagian Halaman (Informasi) -->
+    <div id="informasi" class="container-fluid">
+        <br>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-sm-6">
+                <!-- Deskripsi Aplikasi -->
+                <h2>WAP</h2>
+                <h4>Wildfires Area Predictor</h4><br>
+                <p style="text-align: justify;text-justify: inter-word;">
+                    Aplikasi ini dibuat untuk menentukan luasnya daerah yang memiliki potensi kebakaran hutan. Luasan dengan satuan Hektar adalah hasil yang dapat diprediksi melalui aplikasi ini. Pengguna diminta untuk memberikan 6 nilai pengukuran untuk dapat mengetahui
+                    luasan dari daerah yang berpotensi mengalami kebakaran hutan. Enam nilai pengukuran tersebut adalah <i>Bulan</i>, <i>ffmc</i>, <i>DMC</i>, <i>Temperatur</i>, <i>RH</i>, dan <i>DC</i>. Dimana ffmc adalah parameter
+                    yang mewakili kelembaban dari bahan bakar serasah hutan di bawah kanopi hutan, DMC adalah parameter kelembaban bahan bakar organik yang terurai di bawah serasah, dan RH adalah kelembaban relatif.
+
+                </p>
+                <br>
+
+                <!-- Tombol Mulai -->
+                <nav id="navgo" class="navbar" style="background-color:#ffffff;z-index: 0;">
+                    <ul class="nav nav-pills">
+                        <li class="nav-item">
+                            <a class="btn btn-default btn-lg" href="#aplikasi" style="background-color:#666564">Start</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="col-sm-6">
+                <br>
+                <br>
+                <!-- Gambar Deskripsi Aplikasi -->
+                <img src={{ url_for( 'static', filename='/images/fire.png' ) }} width="500"></img>
+            </div>
+        </div>
+        <br>
+    </div>
+
+
+    <!-- Bagian Halaman (Aplikasi) -->
+    <div id="aplikasi" data-bs-spy="scroll" data-bs-target="#navgo" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-sm-6">
+                </br>
+                <!-- Input Nilai Pengukuran dari Pengguna -->
+                <h2 style="margin-left: 50px;">Hitung Luas Prediksi </h2>
+                <form action=>
+                    <div class="form-group" style="margin-left: 50px;">
+                        <!-- Input Slider untuk Nilai Pengukuran Bunga Iris -->
+                        <label for="range_month">Masukkan Bulan (berupa angka| min. 1 = Januari | max. 12 = Desember ) </label>&nbsp;&rarr;&nbsp;
+                        <span id="rangeVal_month"><!-- Default value --></span>
+                        <input type="input" step="1" class="slider" id="range_month" onInput="$('#rangeVal_month').html($(this).val())">
+                        </br>
+                        <label for="range_temp">Masukkan Temperature (celcius | min=2.2 | max=33.30) </label>&nbsp;&rarr;&nbsp;
+                        <span id="rangeVal_temp"><!-- Default value --></span>
+                        <input type="input" step="0.05" class="slider" id="range_temp" onInput="$('#rangeVal_temp').html($(this).val())">
+                        </br>
+                        <label for="range_ffmc">Masukkan FFMC (FWI System| min=18.7 | max=96.20) </label>&nbsp;&rarr;&nbsp;
+                        <span id="rangeVal_ffmc"><!-- Default value --></span>
+                        <input type="input" step="0.05" class="slider" id="range_ffmc" onInput="$('#rangeVal_ffmc').html($(this).val())">
+                        </br>
+                        <label for="range_dmc">Masukkan DMC (FWI System| min=1.1| max=291.3) </label>&nbsp;&rarr;&nbsp;
+                        <span id="rangeVal_dmc"><!-- Default value --></span>
+                        <input type="input" step="0.05" class="slider" id="range_dmc" onInput="$('#rangeVal_dmc').html($(this).val())">
+                        </br>
+                        <label for="range_rh">Masukkan RH (dalam % | min=15| max=100)</label>&nbsp;&rarr;&nbsp;
+                        <span id="rangeVal_rh"><!-- Default value --></span>
+                        <input type="input" step="0.05" class="slider" id="range_rh" onInput="$('#rangeVal_rh').html($(this).val())">
+                        </br>
+                        <label for="range_dc">Masukkan DC (FWI System| min=7.9| max=860.6)</label>&nbsp;&rarr;&nbsp;
+                        <span id="rangeVal_dc"><!-- Default value --></span>
+                        <input type="input" step="0.05" class="slider" id="range_dc" onInput="$('#rangeVal_dc').html($(this).val())">
+                        </br><br>
+                        <!-- Tombol Prediksi -->
+                        <button type="submit" id="prediksi_submit" class="btn btn-default btn-lg" style="background-color:#c0afaf">Hitung Prediksi</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-sm-6">
+                <br>
+                <!-- Bagian Halaman untuk Hasil Prediksi -->
+                <div id="hasil_prediksi" align="center">
+                    <!-- Hasil Prediksi akan ditampilkan di sini-->
+
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+    </div>
+
+    <!-- Bagian Halaman (Anggota Kelompok) -->
+    <div id="anggotaKelompok" class="container-fluid text-center">
+        <h2>OUR TEAM PROJECT</h2>
+        <h3>GolfOne</h3>
+        <br>
+        <div class="row slideanim">
+            <div class="col-sm-4">
+                <img src={{ url_for( 'static', filename='/images/sandrina.png' ) }} alt="Image" class="image"></img>
+                <h4>Sandrina Bintang</h4>
+                <p>INSTITUT TEKNOLOGI SEPULUH NOPEMBER</p>
+            </div>
+            <div class="col-sm-4">
+                <img src={{ url_for( 'static', filename='/images/shafira.png' ) }} alt="Image" class="image"></img>
+                <h4>Shafira Khaerunnisa</h4>
+                <p>INSTITUT TEKNOLOGI SEPULUH NOPEMBER</p>
+            </div>
+            <div class="col-sm-4">
+                <img src={{ url_for( 'static', filename='/images/salman.png' ) }} alt="Image" class="image"></img>
+                <h4>Salman Al Farisi Sudirlan</h4>
+                <p>INSTITUT TEKNOLOGI SEPULUH NOPEMBER</p>
+            </div>
+        </div>
+        <br>
+        <div class="row slideanim">
+            <div class="col-sm-6">
+                <img src={{ url_for( 'static', filename='/images/riki.png' ) }} alt="Image" class="image"></img>
+                <h4>Riki Indramawan</h4>
+                <p>INSTITUT TEKNOLOGI SEPULUH NOPEMBER</p>
+            </div>
+            <div class="col-sm-6">
+                <img src={{ url_for( 'static', filename='/images/rio.png' ) }} alt="Image" class="image"></img>
+                <h4>Rio Meisya</h4>
+                <p>UNIVERSITAS TRUNOJOYO</p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="container-fluid text-center">
+        <a href="#halamanku" title="To Top">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </a>
+    </footer>
+
+
+    <div class="ct-footer-post">
+        <div class="container">
+            <div class="inner-left">
+                <ul>
+                    <li>
+                        <a href="https://orbitfutureacademy.id/privacy-policy/">FAQ</a>
+                    </li>
+                    <li>
+                        <a href="https://orbitfutureacademy.id/">News</a>
+                    </li>
+                    <li>
+                        <a href="https://orbitfutureacademy.id/contact-us/">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="inner-right">
+                <p>
+                    Copyright © Orbit Future Academy &nbsp;
+                    <a href=""></a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+    </footer>
+    <!-- JavaScript untuk Animasi Scroll dan Prediksi Model -->
+    <script src={{ url_for( 'static', filename='/js/client_side.js' ) }}></script>
+
+</body>
+
+</html>
