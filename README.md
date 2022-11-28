@@ -45,4 +45,4 @@ Mewakili kelembaban bahan bakar dari bahan organik yang terurai di bawah serasah
 `input dalam FWI System| min=7.9| max=860.6`
 
 #### Output
-Adapun output yang dihasilkan dari input aplikasi ini yaitu hasil prediksi luas daerah yang memiliki potensi kebakaran hutan dalam satuan **Hektar (HA)***
+Adapun output yang dihasilkan dari input aplikasi ini yaitu hasil prediksi luas daerah yang memiliki potensi kebakaran hutan dalam satuan **Hektar (ha)**
