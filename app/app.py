@@ -69,8 +69,10 @@ if __name__ == '__main__':
 	# Load model yang telah ditraining
 	# model = load('model_iris_dt.model')
 
+	
+	print(exec('sudo lsof -i -P -n | grep LISTEN'))
 	# Run Flask di localhost 
-	app.run(host="localhost", port=4321, debug=False)
+	app.run(host="localhost", port=4829, debug=False)
 	
 	
 
