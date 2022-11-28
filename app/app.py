@@ -70,7 +70,7 @@ if __name__ == '__main__':
 	# model = load('model_iris_dt.model')
 
 	# Run Flask di localhost 
-	app.run(host="localhost", port=8080, debug=False)
+	app.run(host="localhost", port=4321, debug=False)
 	
 	
 
