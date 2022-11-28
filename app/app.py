@@ -11,6 +11,8 @@ from joblib import load
 # =[Variabel Global]=============================
 
 app   = Flask(__name__, static_url_path='/static')
+import os
+print(os.getcwd())
 model = load('extra_tree.model')
 
 # =[Routing]=====================================
