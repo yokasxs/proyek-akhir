@@ -69,7 +69,7 @@ if __name__ == '__main__':
 	# Load model yang telah ditraining
 
 	# Run Flask di localhost 
-	app.run(host="localhost", port=5825, debug=False)
+	app.run(host="localhost", port=5925, debug=False)
 	
 	
 
