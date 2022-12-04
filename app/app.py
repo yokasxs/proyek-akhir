@@ -13,7 +13,7 @@ from joblib import load
 app   = Flask(__name__, static_url_path='/static')
 import os
 print(f'INI DIRECTORY ROOT {os.getcwd()}')
-model = load('extra_tree.model')
+model = load('app/extra_tree.model')
 
 # =[Routing]=====================================
 
