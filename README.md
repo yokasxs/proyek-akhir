@@ -1,5 +1,5 @@
 # Proyek Akhir Orbit Future Academy 
-Proyek ini merupakan tugas akhir dari Program Studi Independen Bersertifikat oleh Orbit Future Academy Angkatan 3
+Proyek ini merupakan tugas akhir dari Program Studi Independen Bersertifikat oleh Orbit Future Academy Angkatan 3 berupa aplikasi berbasis website yang dapat diakses melalui <a href="http://golfone.pythonanywhere.com"><b style="color:red">link berikut ini</b></a>
 
 ## Team Project
 **Goldfarb 1 (GolfOne)**
