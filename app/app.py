@@ -57,7 +57,7 @@ def apiDeteksi():
 		# Return hasil prediksi dengan format JSON
 		return jsonify({
 			"prediksi": hasil_prediksi
-			# "gambar_prediksi" : gambar_prediksi
+			
 		})
 		
 	
