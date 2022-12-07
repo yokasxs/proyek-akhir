@@ -5,7 +5,7 @@
 from flask import Flask,render_template,request,jsonify
 import pandas as pd
 import numpy as np
-from sklearn.tree import DecisionTreeClassifier
+from sklearn.tree import ExtraTreeClassifier
 from joblib import load
 
 # =[Variabel Global]=============================
